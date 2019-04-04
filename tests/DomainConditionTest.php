@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Vdlp\RedirectConditionsDomain\Tests;
 
-use Illuminate\Http\Request;
 use PluginTestCase;
 use Vdlp\RedirectConditions\Models\ConditionParameter;
 use Vdlp\RedirectConditions\Tests\Factories\RedirectRuleFactory;
@@ -22,10 +21,6 @@ class DomainConditionTest extends PluginTestCase
      */
     public function testWithSpecificDomain()
     {
-        /** @var Request $request */
-        $request = resolve(Request::class);
-        $request->headers->set('Accept-Language', 'nl-nl,nl;q=0.5');
-
         /** @var DomainCondition $condition */
         $condition = resolve(DomainCondition::class);
 
@@ -34,7 +29,7 @@ class DomainConditionTest extends PluginTestCase
             'condition_code' => $condition->getCode(),
             'is_enabled' => date('Y-m-d H:i:s'),
             'parameters' => [
-                'domain' => 'example.com',
+                'domain' => 'localhost',
             ]
         ]);
 
