@@ -1,0 +1,14 @@
+{
+    "name": "vdlp/oc-redirectconditionsdomain-plugin",
+    "description": "Adds Domain conditions to the Redirect plugin.",
+    "type": "october-plugin",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Van der Let & Partners",
+            "email": "octobercms@vdlp.nl"
+        }
+    ],
+    "require": {
+    }
+}
