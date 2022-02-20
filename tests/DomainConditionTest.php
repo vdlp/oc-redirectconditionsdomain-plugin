@@ -9,17 +9,12 @@ use Vdlp\RedirectConditions\Models\ConditionParameter;
 use Vdlp\RedirectConditions\Tests\Factories\RedirectRuleFactory;
 use Vdlp\RedirectConditionsDomain\Classes\DomainCondition;
 
-/**
- * Class DomainConditionTest
- *
- * @package Vdlp\RedirectConditionsDomain\Tests
- */
 class DomainConditionTest extends PluginTestCase
 {
     /**
      * @throws \PHPUnit_Framework_AssertionFailedError
      */
-    public function testWithSpecificDomain()
+    public function testWithSpecificDomain(): void
     {
         /** @var DomainCondition $condition */
         $condition = resolve(DomainCondition::class);
@@ -30,7 +25,7 @@ class DomainConditionTest extends PluginTestCase
             'is_enabled' => date('Y-m-d H:i:s'),
             'parameters' => [
                 'domain' => 'localhost',
-            ]
+            ],
         ]);
 
         $rule = RedirectRuleFactory::createRedirectRule();
