@@ -11,11 +11,9 @@ use Vdlp\RedirectConditions\Classes\Condition;
 
 class DomainCondition extends Condition
 {
-    private Request $request;
-
-    public function __construct(Request $request)
-    {
-        $this->request = $request;
+    public function __construct(
+        private Request $request
+    ) {
     }
 
     public function getCode(): string
@@ -49,7 +47,7 @@ class DomainCondition extends Condition
 
         try {
             $host = $this->request->getHost();
-        } catch (SuspiciousOperationException $exception) {
+        } catch (SuspiciousOperationException) {
             return false;
         }
 
