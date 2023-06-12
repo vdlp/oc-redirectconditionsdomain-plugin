@@ -12,7 +12,7 @@ use Vdlp\RedirectConditions\Classes\Condition;
 class DomainCondition extends Condition
 {
     public function __construct(
-        private Request $request
+        private Request $request,
     ) {
     }
 
@@ -23,12 +23,12 @@ class DomainCondition extends Condition
 
     public function getDescription(): string
     {
-        return 'Domain';
+        return 'vdlp.redirectconditionsdomain::lang.domain.description';
     }
 
     public function getExplanation(): string
     {
-        return 'Match on Domain name.';
+        return 'vdlp.redirectconditionsdomain::lang.domain.explanation';
     }
 
     public function passes(RedirectRule $rule, string $requestUri): bool
@@ -59,10 +59,10 @@ class DomainCondition extends Condition
         return [
             'domain' => [
                 'tab' => self::TAB_NAME,
-                'label' => 'Domain name',
+                'label' => 'vdlp.redirectconditionsdomain::lang.domain.label',
                 'type' => 'text',
                 'span' => 'left',
-                'placeholder' => 'example.com',
+                'placeholder' => 'vdlp.redirectconditionsdomain::lang.domain.placeholder',
             ],
         ];
     }
