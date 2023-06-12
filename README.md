@@ -15,11 +15,11 @@ On a positive match the redirect will take place if the request matches given co
 
 **Condition parameters:**
 
-* Domain name (case insensitive)
+* Domain name (case-insensitive)
 
 ## Unit tests
 
-To run the Unit Tests of this plugin, execute the following command from the project root: 
+To run the Unit Tests of this plugin, execute the following command from the project root:
 
 ```
 vendor/bin/phpunit plugins/vdlp/redirectconditionsdomain

@@ -10,8 +10,10 @@ use Vdlp\RedirectConditionsDomain\Classes\DomainCondition;
 
 final class Plugin extends PluginBase
 {
+    /**
+     * @inheritdoc
+     */
     public $require = [
-        'Vdlp.Redirect',
         'Vdlp.RedirectConditions',
     ];
 
