@@ -11,3 +11,6 @@ v1.2.0:
 v1.2.1:
     - Maintenance release
     - Add English and Dutch language
+v1.3.0:
+    - Minimal required October CMS version 4.0
+    - Minimal version of PHP required is 8.2.0
